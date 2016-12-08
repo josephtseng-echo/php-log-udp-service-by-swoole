@@ -14,8 +14,9 @@ function admin($ip, $port, $cmd = 1) {
 
 function send_udp($content, $ip, $port) {
 	$socket = @socket_create(AF_INET, SOCK_DGRAM, SOL_UDP);
+    //端口复用
     socket_set_option($socket, SOL_SOCKET, SO_REUSEADDR,1);
-	var_dump(@socket_sendto($socket, $content, strlen($content), 0, $ip, $port));
+    var_dump(@socket_sendto($socket, $content, strlen($content), 0, $ip, $port));
 }
 
 function log_test($ip, $port, $data) {
