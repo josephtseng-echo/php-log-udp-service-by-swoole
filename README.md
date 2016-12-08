@@ -34,5 +34,5 @@ by swoole
 --worker swoole worker num  
 --task swoole task worker num  
 
-### 调用
+### 使用
 请看test/test.php文件  
